@@ -32,9 +32,9 @@ $url='https://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
      function BAZA() 
      {
    $this->host = 'localhost';
-   $this->baza = 'multi';
-   $this->uzytkownik = 'multi';
-   $this->haslo = 'UVhI0NNasgo19bm';
+   $this->baza = '';
+   $this->uzytkownik = '';
+   $this->haslo = '';
    $this->polacz = mysqli_connect($this->host, $this->uzytkownik,$this->haslo);
    mysqli_select_db($this->polacz, $this->baza);
      }
