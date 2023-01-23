@@ -1,15 +1,41 @@
-# multi.nascam.cz
-**multi access to nascam NVR**
->The system is free and works only with NasCam DVR.
-
-
-
+# Multi access to nascam NVR
 
 
 Multi NasCam is designed to manage NasCam NVR. 
+The system is free and works only with NasCam NVR.
+
+## **Instalation**
+- SQL
+
+you must import 
+```
+install/database.sql
+```
+
+You can define your sql login and password in the : lib/main.php  
+
+```
+$host = "";
+$baza = "";
+$user = "";
+$password = "";
+```
+
+
+- System componets
+
+you need 
+
+```
+php-twig
+libphp-phpmailer
+```
+* API KEY
+
 
 To add a NVR NasCam, we need to know its IP and the API key defined on the device.
 
+**default login and password: nascam/nascam**
 
 ## **The demo is available at :**
 
