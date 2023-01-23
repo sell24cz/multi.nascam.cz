@@ -1,0 +1,20 @@
+Options +FollowSymlinks
+
+# Prevent Directoy listing 
+Options -Indexes
+
+# SEO URL Settings
+RewriteEngine On
+
+RewriteRule ^index.html$ index.php [L]
+RewriteRule ^index-([^-]+).html$ index.php?lang=$1 [L]
+RewriteRule ^index-([^-]+)-([^-]+).html$ index.php?module=$1&lang=$2 [L]
+
+RewriteRule ^login.html$ login.php [L]
+
+
+
+
+#bledy
+#ErrorDocument 404 /404.html
+#ErrorDocument 403 /404.html

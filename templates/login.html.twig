@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="author" content="Muhamad Nauval Azhar">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="description" content="NasCam,multi view point to all nascam NVR">
+      <title>{{title}} </title>
+      <link href="css/sb-admin-2.min.css" rel="stylesheet">
+      <!-- notification -->
+      <!-- CSS -->
+      <link rel="stylesheet" href="simple-notify/simple-notify.min.css" />
+      <!-- JS -->
+      <script src="simple-notify/simple-notify.min.js"></script>
+   </head>
+   <body>
+      <section class="h-100">
+         <div class="container h-100" style="margin-top: 2%;"> 
+            <div class="row justify-content-sm-center h-100">
+               <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+
+                  <div class="card shadow-lg">
+                     <div class="card-body p-5">
+                  <div class="text-center my-5">
+                     <img src="https://panel.nascam.cz/img/1b_512.png" alt="nascam multi logo" width="250">
+                  </div>
+                   
+                        {{checkLogin}}
+                        <form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+                           <div class="mb-3">
+                              <label class="mb-2 text-muted" for="email">{{email}}</label>
+                              <input id="email" type="email" class="form-control" name="login" value="" required autofocus>
+                              <div class="invalid-feedback">
+                                 {{emailInvalid}}
+                              </div>
+                           </div>
+                           <div class="mb-3">
+                              <div class="mb-2 w-100">
+                                 <label class="text-muted" for="password">{{password}}</label>
+                                 <a data-toggle="modal" data-target="#exampleModal" href="" class="float-end" data-toggle="modal" data-target="#exampleModal">
+                                 {{passwordForget}}
+                                 </a>
+                              </div>
+                              <input id="password" type="password" class="form-control" name="password" required>
+                              <div class="invalid-feedback">
+                                 {{passwordRequired}}
+                              </div>
+                           </div>
+                           <div class="d-flex align-items-center" style="float: right;">
+                              <button type="submit" class="btn btn-dark ms-auto btn-lg" style="float: right;">
+                              {{login}}
+                              </button>
+                           </div>
+
+
+                           
+                        </form>
+                     </div>
+          </div>
+                               
+      <span style="float: right;  margin-right: 10px;" >
+
+    <a href="https://play.google.com/store/apps/details?id=com.sell24cz.nascamview" target="_blank"><img src="https://panel.nascam.cz/images/android.png " alt="android" style="width: 150px; float: right;" /> </a>
+
+</span>  <br />
+        
+                  <div class="text-center mt-5 text-muted">
+                     {{footer}}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Button trigger modal -->
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">{{newPass}}</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <form method="POST">
+                     <div class="form-group">
+                        <label for="exampleInputPassword1">{{type}}</label>
+                        <input type="email" name="newpass" class="form-control" id="exampleInputPassword1" placeholder="">
+                     </div>
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                     <button type="submit"style="float: right;" class="btn btn-primary">{{sendEmail}}</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Bootstrap core JavaScript-->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- Core plugin JavaScript-->
+      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+      <script>
+         $('#myModal').on('shown.bs.modal', function () {
+           $('#myInput').trigger('focus')
+         })
+         
+      </script>
+   </body>
+</html>
