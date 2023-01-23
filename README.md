@@ -1,5 +1,7 @@
 # multi.nascam.cz
 **multi access to nascam NVR**
+>The system is free and works only with NasCam DVR.
+
 
 
 
